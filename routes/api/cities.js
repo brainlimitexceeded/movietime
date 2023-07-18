@@ -3,20 +3,6 @@ const router = express.Router();
 const cities = require('cities.json');
 
 
-
-// Item Model
-// const Item = require('../../models/City');
-
-// @route   GET api/items
-// @desc    Get All Items
-// @access  Public
-// router.get('/', (req, res) => {
-//   Item.find()
-//     .sort({ date: -1 })
-//     .then(items => res.json(items))
-// });
-
-
 // Function to calculate distance between two points specified by latitude and longitude
 function calculateDistance(lat1, lon1, lat2, lon2) {
   const dx = lat2 - lat1;

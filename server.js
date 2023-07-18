@@ -1,6 +1,9 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cities = require('./routes/api/cities'); 
+const movies = require('./routes/api/movies'); 
+const seats = require('./routes/api/seats');
+const payment = require('./routes/api/payment');
 
 const app = express();
 
@@ -14,6 +17,9 @@ mongoose
   .catch(err => console.log(err));
 
 app.use('/api/cities', cities);
+app.use('/api/movies', movies);
+app.use('/api/seats', seats);
+app.use('/api/payment', payment);
 
 const port = process.env.PORT || 5400;
 

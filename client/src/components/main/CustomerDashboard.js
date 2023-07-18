@@ -3,6 +3,11 @@ import Header from './Header';
 import Footer from './Footer';
 import Movies from './Movies';
 import Home from './Home';
+import Detail from './Detail';
+import Book from './Book';
+import Allocate from './Allocate';
+import Payment from './Payment';
+
 
 function CustomerDashboard() {
   const [display, setDisplay] = useState('home');
@@ -11,6 +16,18 @@ function CustomerDashboard() {
     const handleHashChange = () => {
       if (window.location.hash === '#movies') {
         setDisplay('movies');
+      }
+      else if (window.location.hash.startsWith('#details?')) {
+        setDisplay('details');
+      }
+      else if (window.location.hash.startsWith('#book?')) {
+        setDisplay('book');
+      }
+      else if (window.location.hash.startsWith('#allocate?')) {
+        setDisplay('allocate');
+      }
+      else if (window.location.hash.startsWith('#payment?')) {
+        setDisplay('payment');
       } else {
         setDisplay('home');
       }
@@ -32,6 +49,18 @@ function CustomerDashboard() {
       )}
       {display === 'home' && (
           <Home />
+      )}
+      {display === 'details' && (
+          <Detail />
+      )}
+      {display === 'book' && (
+          <Book/>
+      )}
+      {display === 'allocate' && (
+          <Allocate/>
+      )}
+      {display === 'payment' && (
+          <Payment/>
       )}
       <Footer />
     </div>

@@ -9,9 +9,11 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#4a148c', // Bronze color
+      light : '#ba68c8'
     },
     secondary: {
-      main: '#c0ca33', // Bronze color
+      main: '#827717', // Bronze color
+      light: "#dcedc8"
     },
   },
 });
